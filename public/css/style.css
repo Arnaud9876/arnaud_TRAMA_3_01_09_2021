@@ -4,7 +4,11 @@
 }
 
 #adresse {
-  background-color: aqua;
+  background-color: red;
+}
+
+img {
+  width: 150px;
 }
 
 /*# sourceMappingURL=style.css.map */
