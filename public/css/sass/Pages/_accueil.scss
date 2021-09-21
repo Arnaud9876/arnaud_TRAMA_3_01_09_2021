@@ -1,0 +1,103 @@
+/*--Le logo--*/
+
+.logo{
+    display: block;
+    width: 100%;
+    @include mixin-flex-center;
+}
+
+.logo__img{
+    width: 45%;
+    display: flex;
+  justify-content: center;
+}
+
+/*--le header--*/
+
+#adresse{
+    @include mixin-flex-center;
+    background-color:lightgrey ;
+    border-top:darkgrey solid 3px;
+    padding: 15px 0 15px 0;
+    margin-top: 15px;
+}
+
+.fa-map-marker-alt{
+    padding-right: 20px;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: gainsboro;
+}
+
+.header__titre{
+    margin: 20px 15% 0 15%;
+}
+
+.header__p{
+    margin: 0 5% 0 5%;
+}
+
+/*--section--*/
+
+.titre-h1{
+    @include mixin-position-h1;
+}
+
+ol{
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+    padding-left: 0;
+}
+.liste-explications{
+     @include mixin-liste-explications;
+ }
+
+ .puces{
+     padding: 17px;
+     color: grey;
+ }
+
+/*--main--*/
+main{
+    background-color: gainsboro;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.container-main{
+    @include mixin-main;
+}
+
+.container-main__img{
+    @include mixin-main__img;
+}
+
+.container-main__h2{
+    @include mixin-main__h2;
+}
+.container-main__p{
+    @include mixin-main__p;
+}
+
+/*--footer--*/
+.container-footer{
+@include mixin-footer;
+text-decoration: none;
+padding-bottom: 20px;
+}
+
+.footer-logo{
+width: 100%;
+}
+.footer-logo img{
+    width: 33%;
+    margin: 20px 0 0 20px;
+}
