@@ -1,7 +1,80 @@
+@charset "UTF-8";
+/*--liste du fonctionnement--*/
+/*--mixin pour le main--*/
+/*--mixin pour le footer--*/
+/*---mixins pour les pages restaurants---*/
 /*--Le directory base contient la base du site,
  la police de caractere et les normes--*/
+@font-face {
+  font-family: "roboto";
+  src: url(./font/Roboto-Regular.ttf) format("TrueType");
+  font-family: "shrikhand";
+  src: url(./font/Shrikhand-Regular.ttf) format("TrueType");
+}
 html {
-  font-family: "Roboto", "sans-serif";
+  font-family: "roboto", sans-serif;
+}
+
+.footer-logo__p {
+  font-family: "shrikhand", sans-serif;
+}
+
+/*--font-size--*/
+h1 {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1em 2;
+  font-family: "shrikhand", sans-serif;
+}
+
+h4 {
+  font-size: 0.8em;
+  font-weight: normal;
+}
+
+p {
+  font-size: 0.8em;
+}
+
+footer li {
+  font-size: 0.8em;
+}
+
+.footer-i {
+  font-size: 0.8em;
+}
+
+/*--les liens--*/
+html a, html a:active {
+  text-decoration: none;
+  color: black;
+}
+
+.container-footer a, .container-footer a:active {
+  color: white;
+}
+
+/*--les img--*/
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/*---le dossier des boutons-*/
+.bouton {
+  background-color: #FF79DA;
+  padding: 11px;
+  margin-bottom: 50px;
+  border-radius: 20px;
+  color: white;
 }
 
 /*--Le logo--*/
@@ -13,7 +86,7 @@ html {
 }
 
 .logo__img {
-  width: 45%;
+  width: 50%;
   display: flex;
   justify-content: center;
 }
@@ -22,8 +95,8 @@ html {
 #adresse {
   display: flex;
   justify-content: center;
-  background-color: lightgrey;
-  border-top: darkgrey solid 3px;
+  background-color: #EAEAEA;
+  border-top: #CECECE 3px solid;
   padding: 15px 0 15px 0;
   margin-top: 15px;
 }
@@ -37,22 +110,23 @@ html {
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
-  background-color: gainsboro;
+  background-color: #F6F6F6;
+  text-align: center;
 }
 
 .header__titre {
-  margin: 20px 15% 0 15%;
+  margin: 20px 20% 10px 20%;
 }
 
 .header__p {
-  margin: 0 5% 0 5%;
+  margin: 0 10% 20px 10%;
 }
 
-/*--section--*/
+/*--section fonctionnement--*/
 .titre-h1 {
   display: flex;
   justify-content: flex-start;
-  padding: 40px 0 0 10px;
+  padding: 30px 0 0 10px;
 }
 
 ol {
@@ -64,20 +138,53 @@ ol {
 
 .liste-explications {
   display: flex;
-  background-color: gainsboro;
+  background-color: #F6F6F6;
   border-radius: 15px;
   margin-bottom: 30px;
   width: 90%;
+  font-weight: bold;
+  box-shadow: 3px 3px #EAEAEA, -3px 3px #EAEAEA;
+  position: relative;
+}
+.liste-explications .puces {
+  padding: 15px;
+  color: grey;
+  margin-left: 10px;
+}
+.liste-explications .liste-explications__p {
+  margin: 14px 0 14px 0;
 }
 
-.puces {
-  padding: 17px;
-  color: grey;
+.liste-explications__numero {
+  background-color: #9356DC;
+  border-radius: 100%;
+  padding: 1px 5px 1px 5px;
+  color: #F6F6F6;
+  position: absolute;
+  margin-left: -7px;
+}
+
+/*--section fonctionnement hover--*/
+.liste-explications:hover {
+  background-color: #9356DC;
+  opacity: 0.1;
+}
+.liste-explications:hover .puces:hover {
+  color: #9356DC;
+  isolation: isolate;
 }
 
 /*--main--*/
-main {
-  background-color: gainsboro;
+.titre-restaurants {
+  display: flex;
+  background-color: #F6F6F6;
+  align-items: start;
+  margin: 0;
+  padding: 30px 0 20px 15px;
+}
+
+.main-accueil {
+  background-color: #F6F6F6;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -87,13 +194,15 @@ main {
 .container-main {
   background-color: white;
   width: 90%;
+  height: 200px;
   border-radius: 20px;
   margin-bottom: 15px;
+  position: relative;
 }
 
 .container-main__img {
   width: 100%;
-  height: 80%;
+  height: 70%;
   border-radius: 20px 20px 0 0;
 }
 
@@ -105,21 +214,115 @@ main {
   margin: 5px 0 15px 15px;
 }
 
-/*--footer--*/
-.container-footer {
-  background-color: #2B2D2F;
-  color: white;
-  text-decoration: none;
-  padding-bottom: 20px;
+.container-main__nouveau {
+  display: flex;
+  border: 1px solid #99E2D0;
+  background-color: #99E2D0;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  margin: 0;
+  padding: 5px;
+  color: #278870;
 }
 
-.footer-logo {
+/*--footer--*/
+.container-footer {
+  background-color: #353535;
+  color: white;
+  padding-bottom: 20px;
+}
+.container-footer .footer-logo__p {
+  font-size: medium;
+  padding: 20px 0 0 20px;
+  margin-top: 0;
+}
+.container-footer .footer-ul {
+  list-style: none;
+  padding-inline-start: 20px;
+}
+.container-footer .footer-ul li {
+  margin-bottom: 10px;
+}
+.container-footer .footer-i {
+  margin-right: 10px;
+}
+
+/*--le header--*/
+.header-restaurants {
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.fleche {
+  font-size: 1.2em;
+  margin-left: 15px;
+  position: absolute;
+}
+
+.logo-restaurants__img {
+  width: 50%;
+  margin-left: 25%;
+  margin-bottom: 15px;
+}
+
+/*--l'image de fond--*/
+.img-fond {
+  width: 100%;
+  height: 15em;
+  position: absolute;
+}
+
+/*--main-restaurants--*/
+.main-restaurants {
+  border-radius: 30px 30px 0 0;
+  position: relative;
+  margin-top: 200px;
+  background-color: #F6F6F6;
+  padding-bottom: 30px;
   width: 100%;
 }
 
-.footer-logo img {
-  width: 33%;
-  margin: 20px 0 0 20px;
+.main-restarants__div {
+  width: 100%;
+}
+
+.h4-soulignés {
+  border-bottom: 2px solid #99E2D0;
+  padding-bottom: 5px;
+}
+
+.main-article {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 15px;
+  background-color: white;
+  border-radius: 15px;
+}
+
+/*--le btn commander--*/
+/*--le footer--*/
+.container-footer {
+  background-color: #353535;
+  color: white;
+  padding-bottom: 20px;
+}
+.container-footer .footer-logo__p {
+  font-size: medium;
+  padding: 20px 0 0 20px;
+  margin-top: 0;
+}
+.container-footer .footer-ul {
+  list-style: none;
+  padding-inline-start: 20px;
+}
+.container-footer .footer-ul li {
+  margin-bottom: 10px;
+}
+.container-footer .footer-i {
+  margin-right: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

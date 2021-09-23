@@ -1,6 +1,62 @@
 /*--Le directory base contient la base du site,
  la police de caractere et les normes--*/
 
+@font-face{
+    font-family: "roboto";
+    src: url(./font/Roboto-Regular.ttf) format("TrueType");
+    font-family: "shrikhand";
+    src:url(./font/Shrikhand-Regular.ttf) format("TrueType");
+}
+
 html{
-    font-family: "Roboto", "sans-serif";
+    font-family: "roboto", sans-serif;
+}
+.footer-logo__p{
+    font-family: "shrikhand", sans-serif;
+}
+
+/*--font-size--*/
+
+h1{
+    font-size: $font-size__h1;
+    font-weight: bold;
+}
+h2{
+    font-size:$font-size;
+    font-weight: bold;
+}
+h3{
+    font-size: $font-size__h1(2);
+    font-family:"shrikhand", sans-serif;
+}
+h4{
+    font-size: $font-size;
+    font-weight: normal;
+}
+p{
+    font-size:$font-size ;
+}
+footer li{
+    font-size:$font-size;
+}
+.footer-i{
+    font-size: $font-size;
+}
+
+/*--les liens--*/
+
+html a, html a:active{
+    text-decoration: none;
+    color: black;
+}
+
+.container-footer a, .container-footer a:active{
+    color: white;
+}
+
+/*--les img--*/
+
+img{
+    width: 100%;
+    object-fit: cover;
 }

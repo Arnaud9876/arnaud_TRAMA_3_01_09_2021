@@ -1,0 +1,61 @@
+/*--le header--*/
+
+.header-restaurants{
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+
+.fleche{
+font-size: 1.2em;
+margin-left: 15px;
+position: absolute;
+}
+
+.logo-restaurants__img{
+    width: 50%;
+    margin-left: 25%;
+    margin-bottom: 15px;
+   
+}
+
+/*--l'image de fond--*/
+
+.img-fond{
+    @include mixin-img-fond;
+    position: absolute;
+}
+
+
+/*--main-restaurants--*/
+
+.main-restaurants{
+    border-radius: 30px 30px 0 0;
+    position: relative;
+    margin-top: 200px;
+    background-color: $background;
+    padding-bottom: 30px;
+   
+}
+
+.main-restarants__div{
+    width: 100%;
+}
+.h4-soulignés{
+   @include mixin-h4-soulignés;
+}
+
+.main-article{
+    @include mixin-main-article;
+}
+
+
+/*--le btn commander--*/
+
+
+
+/*--le footer--*/
+.container-footer{
+    @include mixin-footer;
+    }

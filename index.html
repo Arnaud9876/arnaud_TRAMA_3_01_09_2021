@@ -15,6 +15,7 @@
 
 <!--h1grand titre en gras-->
 <!--h2titre des articles-->
+
 <!--h3grand titres des restaurants-->
 <!--h4sous titres en maj-->
 
@@ -28,39 +29,45 @@
         <div class="header">
             <h1 class="header__titre">Réservez le menu qui vous convient</h1>
             <p class="header__p">Découvrez des restaurants d'exception, sélélectionnés par nos soins.</p>
-            <input type="button" value="Explorer nos restaurants">
+            <input class="bouton" type="button" value="Explorer nos restaurants">
         </div>
     </header>
 
     <section>
         <h1 class="titre-h1">Fonctionnement</h1>
         <ol>
-            <li class="liste-explications"><i class="fas fa-mobile-alt puces"></i>
-                <p>Choississez un restaurant</p>
+            <li class="liste-explications">
+                <p class="liste-explications__numero">1</p><i class="fas fa-mobile-alt puces"></i>
+                <p class="liste-explications__p">Choississez un restaurant</p>
             </li>
-            <li class="liste-explications"><i class="fas fa-list-ul puces"></i>
-                <p>Composez votre menu</p>
+            <li class="liste-explications">
+                <p class="liste-explications__numero">2</p><i class="fas fa-list-ul puces"></i>
+                <p class="liste-explications__p">Composez votre menu</p>
             </li>
-            <li class="liste-explications"><i class="fas fa-store puces"></i>
-                <p>Dégustez au restaurant</p>
+            <li class="liste-explications">
+                <p class="liste-explications__numero">3</p><i class="fas fa-store puces"></i>
+                <p class="liste-explications__p">Dégustez au restaurant</p>
             </li>
         </ol>
     </section>
 
-    <main>
-        <h1 class="titre-h1">Restaurants</h1>
+
+    <h1 class="titre-h1 titre-restaurants">Restaurants</h1>
+    <main class="main-accueil">
         <article class="container-main">
             <a href="LaPalette.html">
                 <img class="container-main__img" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
                     alt="">
                 <h2 class="container-main__h2">La palette du goût</h2>
                 <p class="container-main__p">Ménilmontant</p>
+                <p class="container-main__nouveau">Nouveau</p>
             </a>
         </article>
         <article class="container-main">
             <img class="container-main__img" src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="">
             <h2 class="container-main__h2">La note enchantée</h2>
             <p class="container-main__p">Charonne</p>
+            <p class="container-main__nouveau">Nouveau</p>
 
         </article>
         <article class="container-main">
@@ -80,13 +87,14 @@
 
     <Footer class="container-footer">
         <div class="footer-logo">
-            <img src="images/logo/ohmyfood.png" alt="">
+            <p class="footer-logo__p">ohmyfood</p>
         </div>
-        <ul>
-            <li><a href=""><i class="fas fa-utensils"></i>Proposer un restaurant</a></li>
-            <li><a href=""><i class="fas fa-hands-helping"></i>Devenir partenaire</a></li>
+        <ul class="footer-ul">
+            <li><a href=""><i class="fas fa-utensils footer-i"></i>Proposer un restaurant</a></li>
+            <li><a href=""><i class="fas fa-hands-helping footer-i"></i>Devenir partenaire</a></li>
             <li><a href="">Mentions légales</a></li>
             <li><a href="mailto:votreadresse@mail.fr">Contact</a></li>
         </ul>
 
     </Footer>
+</body>

@@ -7,7 +7,7 @@
 }
 
 .logo__img{
-    width: 45%;
+    width: 50%;
     display: flex;
   justify-content: center;
 }
@@ -16,8 +16,8 @@
 
 #adresse{
     @include mixin-flex-center;
-    background-color:lightgrey ;
-    border-top:darkgrey solid 3px;
+    background-color:$adresse;
+    border-top:$border-top 3px solid;
     padding: 15px 0 15px 0;
     margin-top: 15px;
 }
@@ -31,18 +31,19 @@
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
-    background-color: gainsboro;
+    background-color: $background;
+    text-align: center;
 }
 
 .header__titre{
-    margin: 20px 15% 0 15%;
+    margin: 20px 20% 10px 20%;
 }
 
 .header__p{
-    margin: 0 5% 0 5%;
+    margin: 0 10% 20px 10%;
 }
 
-/*--section--*/
+/*--section fonctionnement--*/
 
 .titre-h1{
     @include mixin-position-h1;
@@ -56,16 +57,35 @@ ol{
 }
 .liste-explications{
      @include mixin-liste-explications;
+     position: relative;
  }
 
- .puces{
-     padding: 17px;
-     color: grey;
+.liste-explications__numero{
+    @include  mixin-liste-explications__numero;
  }
+/*--section fonctionnement hover--*/
+.liste-explications:hover{
+    background-color: $color-primaire;
+    opacity: 0.1;
+.puces:hover{
+    color: $color-primaire;
+   isolation: isolate;
+}
+
+}
 
 /*--main--*/
-main{
-    background-color: gainsboro;
+
+.titre-restaurants{
+    display: flex;
+    background-color: $background;
+    align-items: start;
+    margin: 0;
+   padding: 30px 0 20px 15px;
+}
+
+.main-accueil{
+    background-color: $background;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -74,6 +94,7 @@ main{
 
 .container-main{
     @include mixin-main;
+    position: relative;
 }
 
 .container-main__img{
@@ -86,18 +107,13 @@ main{
 .container-main__p{
     @include mixin-main__p;
 }
+.container-main__nouveau{
+    @include mixin-main-nouveau;
+}
 
 /*--footer--*/
 .container-footer{
 @include mixin-footer;
-text-decoration: none;
-padding-bottom: 20px;
 }
+ 
 
-.footer-logo{
-width: 100%;
-}
-.footer-logo img{
-    width: 33%;
-    margin: 20px 0 0 20px;
-}
