@@ -11,7 +11,7 @@
     padding: 30px 0 0 10px;
 }
 
-@mixin mixin-liste-explications {
+@mixin mixin-liste-fonctionnement {
     display: flex;
     background-color: $background;
     border-radius: 15px;
@@ -25,12 +25,12 @@
      color: grey;
      margin-left: 10px;
  }
- .liste-explications__p{
+ .liste-fonctionnement__p{
      margin: 14px 0 14px 0; 
  }
 }
 
-@mixin mixin-liste-explications__numero{
+@mixin mixin-liste-fonctionnement__numero{
     background-color: $color-primaire;
     border-radius: 100%;
     padding: 1px 5px 1px 5px;
@@ -100,22 +100,12 @@ margin: 5px 0 15px 15px;
     }
 }
 
-
-
-
-
-
-
-
-
 /*---mixins pour les pages restaurants---*/
 
 @mixin mixin-img-fond {
     width: 100%;
     height: 15em;
 }
-
-
 
 @mixin mixin-main-article{
     display: flex;

@@ -55,23 +55,25 @@ ol{
    align-items: center;
     padding-left: 0;
 }
-.liste-explications{
-     @include mixin-liste-explications;
+.liste-fonctionnement{
+     @include mixin-liste-fonctionnement;
      position: relative;
  }
 
-.liste-explications__numero{
-    @include  mixin-liste-explications__numero;
+.liste-fonctionnement__numero{
+    @include  mixin-liste-fonctionnement__numero;
  }
+
 /*--section fonctionnement hover--*/
-.liste-explications:hover{
+
+.liste-fonctionnement:hover{
     background-color: $color-primaire;
     opacity: 0.1;
-.puces:hover{
-    color: $color-primaire;
-   isolation: isolate;
 }
 
+.puces:hover{
+    background-color: $color-primaire;
+    
 }
 
 /*--main--*/
@@ -117,3 +119,40 @@ ol{
 }
  
 
+/*--media queries--*/
+
+@media all and (min-width:768px)  {
+    
+.titre-h1{
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.liste-fonctionnement{
+    justify-content: center;
+ }
+
+ .liste-fonctionnement__numero{ 
+    position:relative;
+}
+
+.main-accueil{
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.container-main{
+    width: 45%;
+}
+
+.footer-logo__p{
+   display: flex;
+   justify-content: center;
+}
+
+.footer-li{
+    display: flex;
+   justify-content: space-around;
+}
+}

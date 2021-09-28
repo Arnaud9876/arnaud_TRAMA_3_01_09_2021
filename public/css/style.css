@@ -31,7 +31,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1em 2;
+  font-size: 1.2em;
   font-family: "shrikhand", sans-serif;
 }
 
@@ -70,11 +70,15 @@ img {
 
 /*---le dossier des boutons-*/
 .bouton {
-  background-color: #FF79DA;
+  background: radial-gradient(ellipse, #fface8 20%, #782cd3 100%);
   padding: 11px;
   margin-bottom: 50px;
   border-radius: 20px;
   color: white;
+  box-shadow: 3px 3px 3px #CECECE;
+}
+.bouton:hover {
+  box-shadow: 6px 6px 6px #CECECE;
 }
 
 /*--Le logo--*/
@@ -136,7 +140,7 @@ ol {
   padding-left: 0;
 }
 
-.liste-explications {
+.liste-fonctionnement {
   display: flex;
   background-color: #F6F6F6;
   border-radius: 15px;
@@ -146,16 +150,16 @@ ol {
   box-shadow: 3px 3px #EAEAEA, -3px 3px #EAEAEA;
   position: relative;
 }
-.liste-explications .puces {
+.liste-fonctionnement .puces {
   padding: 15px;
   color: grey;
   margin-left: 10px;
 }
-.liste-explications .liste-explications__p {
+.liste-fonctionnement .liste-fonctionnement__p {
   margin: 14px 0 14px 0;
 }
 
-.liste-explications__numero {
+.liste-fonctionnement__numero {
   background-color: #9356DC;
   border-radius: 100%;
   padding: 1px 5px 1px 5px;
@@ -165,13 +169,13 @@ ol {
 }
 
 /*--section fonctionnement hover--*/
-.liste-explications:hover {
+.liste-fonctionnement:hover {
   background-color: #9356DC;
   opacity: 0.1;
 }
-.liste-explications:hover .puces:hover {
-  color: #9356DC;
-  isolation: isolate;
+
+.puces:hover {
+  background-color: #9356DC;
 }
 
 /*--main--*/
@@ -248,9 +252,43 @@ ol {
   margin-right: 10px;
 }
 
+/*--media queries--*/
+@media all and (min-width: 768px) {
+  .titre-h1 {
+    justify-content: center;
+    padding-bottom: 20px;
+  }
+
+  .liste-fonctionnement {
+    justify-content: center;
+  }
+
+  .liste-fonctionnement__numero {
+    position: relative;
+  }
+
+  .main-accueil {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .container-main {
+    width: 45%;
+  }
+
+  .footer-logo__p {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-li {
+    display: flex;
+    justify-content: space-around;
+  }
+}
 /*--le header--*/
 .header-restaurants {
-  width: 100%;
   display: flex;
   position: relative;
 }
@@ -281,7 +319,13 @@ ol {
   margin-top: 200px;
   background-color: #F6F6F6;
   padding-bottom: 30px;
-  width: 100%;
+}
+
+h3 {
+  display: flex;
+  justify-content: flex-start;
+  padding: 20px 0 20px 10px;
+  margin: 0;
 }
 
 .main-restarants__div {

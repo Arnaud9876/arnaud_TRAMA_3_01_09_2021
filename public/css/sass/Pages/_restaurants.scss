@@ -1,7 +1,6 @@
 /*--le header--*/
 
 .header-restaurants{
-    width: 100%;
     display: flex;
     position: relative;
 }
@@ -37,6 +36,13 @@ position: absolute;
     background-color: $background;
     padding-bottom: 30px;
    
+}
+
+h3{
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px 0 20px 10px;
+    margin: 0;
 }
 
 .main-restarants__div{

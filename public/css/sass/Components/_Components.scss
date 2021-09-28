@@ -1,9 +1,14 @@
 /*---le dossier des boutons-*/
 
 .bouton{
-    background-color: $color-secondaire;
+    background: radial-gradient(ellipse, lighten($color-secondaire,10)20%,darken($color-primaire,10)100%);
     padding: 11px;
     margin-bottom: 50px;
     border-radius: 20px;
     color: white;
+    box-shadow:3px 3px 3px $border-top;
+
+&:hover{
+    box-shadow: 6px 6px 6px $border-top;
 }
+ }
