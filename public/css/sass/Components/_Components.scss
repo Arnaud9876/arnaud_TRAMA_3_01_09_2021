@@ -21,18 +21,13 @@
 --*/
 @keyframes coeur{
     from{
-        .coeur-vide{
-            @include  mixin-main-coeur;
-            opacity: 1;
+         
         }
         
-    }
+    
     to{
-        .coeur-plein{
-            @include  mixin-main-coeur;
-            opacity: 0;
-            color:linear-gradient(to bottom left, $color-secondaire, $color-primaire);
-        }
+        
+        
     }
 }
 /*--Les animations--*/
