@@ -11,6 +11,11 @@
 html{
     font-family: "roboto", sans-serif;
 }
+
+body{
+    margin: 0;
+}
+
 .footer-logo__p{
     font-family: "shrikhand", sans-serif;
 }
@@ -22,7 +27,7 @@ h1{
     font-weight: bold;
 }
 h2{
-    font-size:$font-size;
+    font-size:$font-size__h2;
     font-weight: bold;
 }
 h3{
@@ -34,7 +39,7 @@ h4{
     font-weight: normal;
 }
 p{
-    font-size:$font-size ;
+    font-size:$font-size__p;
 }
 footer li{
     font-size:$font-size;

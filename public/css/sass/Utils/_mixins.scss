@@ -33,10 +33,10 @@
 @mixin mixin-liste-fonctionnement__numero{
     background-color: $color-primaire;
     border-radius: 100%;
-    padding: 1px 5px 1px 5px;
+    padding: 0.4em 0.6em 0.4em 0.6em;
     color: $background;
     position: absolute;
-    margin-left: -7px;
+    margin-left: -0.9em;
  }
 
 /*--mixin pour le main--*/
@@ -56,11 +56,12 @@
 }
 
 @mixin mixin-main__h2{
-margin: 5px 0 0 15px;
+margin: 10px 0 0 10px;
+width: 80%;
 }
 
 @mixin mixin-main__p{
-margin: 5px 0 15px 15px;
+margin: 5px 0 15px 10px;
 }
 
 @mixin mixin-main-nouveau {
@@ -73,6 +74,14 @@ margin: 5px 0 15px 15px;
     margin: 0;
     padding: 5px;
    color: darken($color-tertiaire,40);
+}
+
+@mixin  mixin-main-coeur{
+ display: flex;
+ position: absolute;
+ bottom:25px;
+ right: 25px;
+    
 }
 
 /*--mixin pour le footer--*/
@@ -110,8 +119,7 @@ margin: 5px 0 15px 15px;
 @mixin mixin-main-article{
     display: flex;
     flex-direction: column;
-    width: 100%;
-    margin-bottom: 15px;
+    margin: 0 15px 15px 15px;
     background-color: white;
     border-radius: 15px;
 }
@@ -120,3 +128,14 @@ margin: 5px 0 15px 15px;
     border-bottom: 2px solid $color-tertiaire;
     padding-bottom: 5px;
 }
+
+@mixin mixin-main__check{
+    background-color: $color-tertiaire;
+    color: white;
+    position: absolute;
+    border-radius: 0 15px 15px 0;
+   padding: 17px 13px;
+   right: 0;
+   bottom: 0;
+} 
+    

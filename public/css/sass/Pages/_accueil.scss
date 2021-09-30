@@ -10,6 +10,7 @@
     width: 50%;
     display: flex;
   justify-content: center;
+  margin-top: 15px
 }
 
 /*--le header--*/
@@ -67,13 +68,10 @@ ol{
 /*--section fonctionnement hover--*/
 
 .liste-fonctionnement:hover{
-    background-color: $color-primaire;
-    opacity: 0.1;
-}
-
-.puces:hover{
-    background-color: $color-primaire;
-    
+    background-color: #F5EDFF;
+    .puces{
+        color: $color-primaire;
+    }
 }
 
 /*--main--*/
@@ -112,6 +110,21 @@ ol{
 .container-main__nouveau{
     @include mixin-main-nouveau;
 }
+
+/*--main-coeur--*/
+
+.coeur-vide{
+    @include  mixin-main-coeur;
+    opacity: 1;
+    animation: coeur 1s linear;
+}
+.coeur-plein{
+    @include  mixin-main-coeur;
+    opacity: 0;
+    color:linear-gradient(to bottom left, $color-secondaire, $color-primaire);
+}
+
+
 
 /*--footer--*/
 .container-footer{

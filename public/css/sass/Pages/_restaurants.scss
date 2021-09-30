@@ -5,10 +5,9 @@
     position: relative;
 }
 
-
 .fleche{
-font-size: 1.2em;
-margin-left: 15px;
+font-size: 1.6em;
+margin: 5% 0 0 5%;
 position: absolute;
 }
 
@@ -16,7 +15,7 @@ position: absolute;
     width: 50%;
     margin-left: 25%;
     margin-bottom: 15px;
-   
+    margin-top: 15px;
 }
 
 /*--l'image de fond--*/
@@ -35,33 +34,148 @@ position: absolute;
     margin-top: 200px;
     background-color: $background;
     padding-bottom: 30px;
-   
 }
 
 h3{
     display: flex;
     justify-content: flex-start;
-    padding: 20px 0 20px 10px;
+    padding: 20px 0 20px 20px;
     margin: 0;
 }
 
-.main-restarants__div{
-    width: 100%;
+h4{
+    margin-left: 20px;
 }
+
 .h4-soulignés{
    @include mixin-h4-soulignés;
 }
+/*--l'animation d'apparition--*/
 
 .main-article{
     @include mixin-main-article;
+    animation: apparition 1s linear;
+    position: relative;
+    height: 50px;
+
+    &:hover{
+        .check{
+            @include mixin-main__check;
+            animation: apparition-check 1s linear;
+            animation: apparition-rotation 1s linear;
+        }
+        .main__tarif{
+            animation: decalage-prix 1s linear;
+            animation-fill-mode: forwards;
+            animation-delay: 100ms;
+        }
+        .main__h2{
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}
+
+.main-article-2{
+animation-delay: 200ms;
+}
+
+.main-article-3{
+    animation-delay: 400ms;
+}
+
+/*--l'animation check--*/
+
+.div-check{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+/*--main--*/
+
+.main__h2{
+    @include mixin-main__h2;
+}
+
+.main-infos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.main__p{
+    margin-left: 10px;
+    margin-top: 5px;
+    width: 70%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.main__tarif{
+    margin-right: 20px;
+    margin-top: 5px;
+    font-weight: bold;
 }
 
 
 /*--le btn commander--*/
-
-
+.btn-restaurants{
+    background-color:$background;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
 
 /*--le footer--*/
 .container-footer{
     @include mixin-footer;
     }
+
+
+    /*--media queries--*/
+
+@media all and (min-width:768px)  {
+
+ .fleche{
+    font-size: 2em;
+ }
+    
+h3{
+    display: flex;
+   justify-content: center;
+}
+
+.bouton-restaurants{
+width: 30%;
+}
+
+.footer-logo__p{
+        display: flex;
+        justify-content: center;
+ }
+     
+ .footer-li{
+         display: flex;
+        justify-content: space-around;
+ }
+  }
+
+
+  @media all and (min-width:1000px)  {
+
+    .fleche{
+        font-size: 2.5em;
+        margin-top: 4%;
+     }
+        
+  .main-bloc{
+    display: inline-block;
+   align-items: space-around;
+    width: 33%;
+}
+ }
