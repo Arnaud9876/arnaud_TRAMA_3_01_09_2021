@@ -114,10 +114,10 @@ img {
 }
 @keyframes apparition-rotation {
   from {
-    transform: rotateX(180deg);
+    transform: rotateZ(-180deg);
   }
   to {
-    transform: rotateX(0deg);
+    transform: rotateZ(0deg);
   }
 }
 @keyframes decalage-prix {
@@ -415,7 +415,7 @@ h4 {
   position: relative;
   height: 50px;
 }
-.main-article:hover .check {
+.main-article:hover .div-check {
   background-color: #99E2D0;
   color: white;
   position: absolute;
@@ -423,11 +423,16 @@ h4 {
   padding: 17px 13px;
   right: 0;
   bottom: 0;
-  animation: apparition-check 1s linear;
-  animation: apparition-rotation 1s linear;
+  animation: apparition-check 0.7s linear;
+  animation-fill-mode: forwards;
+  display: flex;
+}
+.main-article:hover .check {
+  animation: apparition-rotation 0.7s linear;
+  animation-fill-mode: forwards;
 }
 .main-article:hover .main__tarif {
-  animation: decalage-prix 1s linear;
+  animation: decalage-prix 0.7s linear;
   animation-fill-mode: forwards;
   animation-delay: 100ms;
 }
@@ -436,6 +441,7 @@ h4 {
   text-overflow: ellipsis;
 }
 
+/*--main-restaurants--*/
 .main-article-2 {
   animation-delay: 200ms;
 }
@@ -444,14 +450,6 @@ h4 {
   animation-delay: 400ms;
 }
 
-/*--l'animation check--*/
-.div-check {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/*--main--*/
 .main__h2 {
   margin: 10px 0 0 10px;
   width: 80%;
@@ -476,6 +474,10 @@ h4 {
   margin-right: 20px;
   margin-top: 5px;
   font-weight: bold;
+}
+
+.div-check {
+  display: none;
 }
 
 /*--le btn commander--*/

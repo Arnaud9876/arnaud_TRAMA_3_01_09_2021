@@ -59,13 +59,18 @@ h4{
     height: 50px;
 
     &:hover{
-        .check{
+        .div-check{
             @include mixin-main__check;
-            animation: apparition-check 1s linear;
-            animation: apparition-rotation 1s linear;
+            animation: apparition-check 0.7s linear; 
+            animation-fill-mode: forwards;
+            display: flex;
+        }
+        .check{
+            animation: apparition-rotation 0.7s linear;
+            animation-fill-mode: forwards;
         }
         .main__tarif{
-            animation: decalage-prix 1s linear;
+            animation: decalage-prix 0.7s linear;
             animation-fill-mode: forwards;
             animation-delay: 100ms;
         }
@@ -76,6 +81,8 @@ h4{
     }
 }
 
+/*--main-restaurants--*/
+
 .main-article-2{
 animation-delay: 200ms;
 }
@@ -84,27 +91,15 @@ animation-delay: 200ms;
     animation-delay: 400ms;
 }
 
-/*--l'animation check--*/
-
-.div-check{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-
-
-/*--main--*/
-
 .main__h2{
     @include mixin-main__h2;
+   
 }
 
 .main-infos{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content:space-between;
 }
 
 .main__p{
@@ -122,6 +117,9 @@ animation-delay: 200ms;
     font-weight: bold;
 }
 
+.div-check{
+   display: none;
+}
 
 /*--le btn commander--*/
 .btn-restaurants{
