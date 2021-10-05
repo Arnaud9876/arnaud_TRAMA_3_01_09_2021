@@ -116,12 +116,20 @@ ol{
 .coeur-vide{
     @include  mixin-main-coeur;
     opacity: 1;
-    animation: coeur 1s linear;
+    
+    
 }
 .coeur-plein{
     @include  mixin-main-coeur;
     opacity: 0;
     color:linear-gradient(to bottom left, $color-secondaire, $color-primaire);
+}
+
+.coeur-vide:hover{
+   color: aqua;
+    opacity: 0;
+    animation: coeur 1s linear;
+   
 }
 
 

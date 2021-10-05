@@ -56,7 +56,7 @@ h4{
     @include mixin-main-article;
     animation: apparition 1s linear;
     position: relative;
-    height: 50px;
+    height: 60px;
 
     &:hover{
         .div-check{
@@ -104,7 +104,7 @@ animation-delay: 200ms;
 
 .main__p{
     margin-left: 10px;
-    margin-top: 5px;
+    margin-top: 10px;
     width: 70%;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -119,6 +119,7 @@ animation-delay: 200ms;
 
 .div-check{
    display: none;
+   z-index: auto;
 }
 
 /*--le btn commander--*/

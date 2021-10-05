@@ -87,11 +87,74 @@ img {
   box-shadow: 6px 6px 6px #CECECE;
 }
 
+/*--Le loader--*/
+.loader {
+  background-color: white;
+}
+
+.loader-min {
+  border-top: 10px solid #9356DC;
+  border-right: 10px solid #FF79DA;
+  border-left: 10px solid #99E2D0;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin-min 3s linear infinite;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.loader-max {
+  border-top: 10px solid #99E2D0;
+  border-right: 10px solid #9356DC;
+  border-left: 10px solid #FF79DA;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  animation: spin-max 3s linear infinite;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+@keyframes spin-min {
+  from {
+    transform: rotate 0deg;
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes spin-max {
+  from {
+    transform: rotate 0deg;
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 /*--Le coeur
 <i class="far fa-heart"></i>coeur vide
 <i class="fas fa-heart"></i>coeur plein
 --*/
 /*--Les animations--*/
+/*--Le coeur--*/
+@keyframes coeur {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+/*--Les restaurants--*/
 @keyframes apparition {
   from {
     opacity: 0;
@@ -284,7 +347,6 @@ ol {
   bottom: 25px;
   right: 25px;
   opacity: 1;
-  animation: coeur 1s linear;
 }
 
 .coeur-plein {
@@ -294,6 +356,12 @@ ol {
   right: 25px;
   opacity: 0;
   color: linear-gradient(to bottom left, #FF79DA, #9356DC);
+}
+
+.coeur-vide:hover {
+  color: aqua;
+  opacity: 0;
+  animation: coeur 1s linear;
 }
 
 /*--footer--*/
@@ -413,14 +481,14 @@ h4 {
   border-radius: 15px;
   animation: apparition 1s linear;
   position: relative;
-  height: 50px;
+  height: 60px;
 }
 .main-article:hover .div-check {
   background-color: #99E2D0;
   color: white;
   position: absolute;
   border-radius: 0 15px 15px 0;
-  padding: 17px 13px;
+  padding: 22px 13px;
   right: 0;
   bottom: 0;
   animation: apparition-check 0.7s linear;
@@ -463,7 +531,7 @@ h4 {
 
 .main__p {
   margin-left: 10px;
-  margin-top: 5px;
+  margin-top: 10px;
   width: 70%;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -478,6 +546,7 @@ h4 {
 
 .div-check {
   display: none;
+  z-index: auto;
 }
 
 /*--le btn commander--*/

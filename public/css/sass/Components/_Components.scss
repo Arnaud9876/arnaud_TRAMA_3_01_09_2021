@@ -15,15 +15,82 @@
 }
  }
 
+/*--Le loader--*/
+.loader{
+    background-color: white; 
+}
+   
+
+.loader-min{
+    border-top:10px solid $color-primaire;
+    border-right:10px solid $color-secondaire;
+    border-left: 10px solid $color-tertiaire;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin-min 3s linear infinite;
+    position:absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.loader-max{
+    border-top:10px solid $color-tertiaire ;
+    border-right:10px solid $color-primaire;
+    border-left:10px solid $color-secondaire;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    animation: spin-max 3s linear infinite;
+    position:absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+@keyframes spin-min{
+    from{
+        transform: rotate (0deg);
+    }
+    to{
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes spin-max{
+    from{
+        transform: rotate (0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
 /*--Le coeur
 <i class="far fa-heart"></i>coeur vide
 <i class="fas fa-heart"></i>coeur plein
 --*/
-
-        
-    
+ 
 /*--Les animations--*/
 
+/*--Le coeur--*/
+
+@keyframes coeur{
+from{
+    opacity: 1;
+}
+to{
+    opacity: 0;
+}
+}
+
+
+/*--Les restaurants--*/
  @keyframes apparition{
      from{
          opacity: 0;
@@ -54,7 +121,6 @@
        transform: rotateZ(0deg);
     }
 }
-
 
  @keyframes decalage-prix{
      from{
