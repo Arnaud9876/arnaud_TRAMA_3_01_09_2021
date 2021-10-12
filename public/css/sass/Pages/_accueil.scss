@@ -119,15 +119,15 @@ ol{
 
 .coeur-vide{
     @include  mixin-main-coeur;
-   transform: scale(0);  
+   transform: scale(1);  
 }
 
 .coeur-plein{
     @include  mixin-main-coeur;
-    transform: scale(1);
+    transform: scale(0);
     background-clip: text;
     background:content-box linear-gradient(to bottom right,lighten($color-secondaire,5),lighten($color-primaire,5));;
-    color: aqua;
+    color: transparent;
 }
 
 .container-coeur:hover{

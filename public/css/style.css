@@ -97,7 +97,7 @@ img {
   position: fixed;
   z-index: 100;
   visibility: hidden;
-  animation: cacher 3s linear;
+  animation: cacher 1.5s linear;
   opacity: 0.5;
 }
 
@@ -108,7 +108,7 @@ img {
   border-radius: 50%;
   width: 80px;
   height: 80px;
-  animation: spin-min 3s linear;
+  animation: spin-min 1.5s linear;
   position: absolute;
   margin: auto;
   top: 0;
@@ -126,7 +126,7 @@ img {
   border-radius: 50%;
   width: 150px;
   height: 150px;
-  animation: spin-max 3s linear;
+  animation: spin-max 1.5s linear;
   position: absolute;
   margin: auto;
   top: 0;
@@ -392,7 +392,7 @@ ol {
   position: absolute;
   bottom: 25px;
   right: 25px;
-  transform: scale(0);
+  transform: scale(1);
 }
 
 .coeur-plein {
@@ -400,10 +400,10 @@ ol {
   position: absolute;
   bottom: 25px;
   right: 25px;
-  transform: scale(1);
+  transform: scale(0);
   background-clip: text;
   background: content-box linear-gradient(to bottom right, #ff93e1, #a16be0);
-  color: aqua;
+  color: transparent;
 }
 
 .container-coeur:hover .coeur-vide {
