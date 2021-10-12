@@ -123,23 +123,24 @@ ol{
 }
 
 .coeur-plein{
-    @include  mixin-main-coeur;
+    @include  mixin-main-coeur; 
     transform: scale(0);
-    background-clip: text;
-    background:content-box linear-gradient(to bottom right,lighten($color-secondaire,5),lighten($color-primaire,5));;
+    background: linear-gradient(to bottom right,lighten($color-secondaire,5),lighten($color-primaire,5));
     color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
 }
 
 .container-coeur:hover{
 
-.coeur-vide{
+    .coeur-vide{
     animation: coeur-vide 1s linear;
- }
+     }
 
-.coeur-plein{
+    .coeur-plein{
     animation: coeur-plein 1s linear;
     animation-fill-mode: forwards;
- }
+     }
 }
 /*--footer--*/
 .container-footer{

@@ -401,9 +401,10 @@ ol {
   bottom: 25px;
   right: 25px;
   transform: scale(0);
-  background-clip: text;
-  background: content-box linear-gradient(to bottom right, #ff93e1, #a16be0);
+  background: linear-gradient(to bottom right, #ff93e1, #a16be0);
   color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 
 .container-coeur:hover .coeur-vide {
@@ -513,6 +514,46 @@ h3 {
   margin: 0;
 }
 
+/*--le coeur--*/
+.h3-coeur {
+  position: relative;
+}
+
+.container-coeur {
+  font-size: 1.4em;
+}
+
+.coeur-vide {
+  display: flex;
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  transform: scale(1);
+  right: 35px;
+}
+
+.coeur-plein {
+  display: flex;
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  transform: scale(0);
+  background: linear-gradient(to bottom right, #ff93e1, #a16be0);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  right: 35px;
+}
+
+.container-coeur:hover .coeur-vide {
+  animation: coeur-vide 1s linear;
+}
+.container-coeur:hover .coeur-plein {
+  animation: coeur-plein 1s linear;
+  animation-fill-mode: forwards;
+}
+
+/*--main restaurant--*/
 h4 {
   margin-left: 20px;
 }

@@ -43,6 +43,46 @@ h3{
     margin: 0;
 }
 
+/*--le coeur--*/
+
+.h3-coeur{
+    position: relative;
+}
+
+.container-coeur{
+    font-size: 1.4em;
+}
+
+.coeur-vide{
+    @include  mixin-main-coeur;
+   transform: scale(1);  
+   right: 35px;
+}
+
+.coeur-plein{
+    @include  mixin-main-coeur; 
+    transform: scale(0);
+    background: linear-gradient(to bottom right,lighten($color-secondaire,5),lighten($color-primaire,5));
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    right: 35px;
+}
+
+.container-coeur:hover{
+
+    .coeur-vide{
+    animation: coeur-vide 1s linear;
+     }
+
+    .coeur-plein{
+    animation: coeur-plein 1s linear;
+    animation-fill-mode: forwards;
+     }
+}
+
+/*--main restaurant--*/
+
 h4{
     margin-left: 20px;
 }
