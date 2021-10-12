@@ -56,7 +56,7 @@ h4{
     @include mixin-main-article;
     animation: apparition 1s linear;
     position: relative;
-    height: 60px;
+    height: 65px;
 
     &:hover{
         .div-check{
@@ -75,8 +75,12 @@ h4{
             animation-delay: 100ms;
         }
         .main__h2{
-            overflow: hidden;
-            text-overflow: ellipsis;
+            animation: decalage 0.7s linear;
+            animation-fill-mode: forwards;
+        }
+        .main__p{
+            animation: decalage 0.7s linear;
+            animation-fill-mode: forwards;
         }
     }
 }
@@ -93,7 +97,9 @@ animation-delay: 200ms;
 
 .main__h2{
     @include mixin-main__h2;
-   
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .main-infos{
@@ -105,14 +111,14 @@ animation-delay: 200ms;
 .main__p{
     margin-left: 10px;
     margin-top: 10px;
-    width: 70%;
+    width: 80%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
 .main__tarif{
-    margin-right: 20px;
+    margin-right: 25px;
     margin-top: 5px;
     font-weight: bold;
 }
@@ -141,16 +147,50 @@ animation-delay: 200ms;
 @media all and (min-width:768px)  {
 
  .fleche{
-    font-size: 2em;
+    font-size: 2.5em;
  }
     
+h4{
+    font-size: 1.7em;
+}
+
 h3{
     display: flex;
    justify-content: center;
+  font-size: 2.3em;
 }
+
+.main__h2{
+font-size:1.3em ;
+}
+
+.main__p{
+    font-size:1.1em ;
+}
+
+.main__tarif{
+    font-size:1.1em ;
+}
+
+.main-article{
+    height: 90px;
+}
+
+
+.main-article{
+    &:hover{
+        .div-check{
+            padding: 37px 15px; 
+        }
+    }    
+}
+
+
+
 
 .bouton-restaurants{
 width: 30%;
+height: 50px;
 }
 
 .footer-logo__p{
@@ -165,7 +205,7 @@ width: 30%;
   }
 
 
-  @media all and (min-width:1000px)  {
+  @media all and (min-width:1200px)  {
 
     .fleche{
         font-size: 2.5em;
@@ -176,5 +216,9 @@ width: 30%;
     display: inline-block;
    align-items: space-around;
     width: 33%;
+}
+
+h3{
+    font-size: 2.6em;
 }
  }

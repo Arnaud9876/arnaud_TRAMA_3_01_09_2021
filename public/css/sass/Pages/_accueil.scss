@@ -113,27 +113,34 @@ ol{
 
 /*--main-coeur--*/
 
+.container-coeur{
+    font-size: 1.3em;
+}
+
 .coeur-vide{
     @include  mixin-main-coeur;
-    opacity: 1;
-    
-    
+   transform: scale(0);  
 }
+
 .coeur-plein{
     @include  mixin-main-coeur;
-    opacity: 0;
-    color:linear-gradient(to bottom left, $color-secondaire, $color-primaire);
+    transform: scale(1);
+    background-clip: text;
+    background:content-box linear-gradient(to bottom right,lighten($color-secondaire,5),lighten($color-primaire,5));;
+    color: aqua;
 }
 
-.coeur-vide:hover{
-   color: aqua;
-    opacity: 0;
-    animation: coeur 1s linear;
-   
+.container-coeur:hover{
+
+.coeur-vide{
+    animation: coeur-vide 1s linear;
+ }
+
+.coeur-plein{
+    animation: coeur-plein 1s linear;
+    animation-fill-mode: forwards;
+ }
 }
-
-
-
 /*--footer--*/
 .container-footer{
 @include mixin-footer;
