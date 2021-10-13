@@ -81,7 +81,7 @@ h3{
      }
 }
 
-/*--main restaurant--*/
+/*--main restaurant*--*/
 
 h4{
     margin-left: 20px;
@@ -169,6 +169,7 @@ animation-delay: 200ms;
 }
 
 /*--le btn commander--*/
+
 .btn-restaurants{
     background-color:$background;
     display: flex;
@@ -177,6 +178,7 @@ animation-delay: 200ms;
  }
 
 /*--le footer--*/
+
 .container-footer{
     @include mixin-footer;
     }
@@ -186,79 +188,92 @@ animation-delay: 200ms;
 
 @media all and (min-width:768px)  {
 
- .fleche{
-    font-size: 2.5em;
- }
+     .fleche{
+        font-size: 2.5em;
+    }
     
-h4{
-    font-size: 1.7em;
-}
+    h4{
+       display: flex;
+       justify-content: center;
+       font-size: 1.7em;
+   }
 
-h3{
-    display: flex;
-   justify-content: center;
-  font-size: 2.3em;
-}
+    h3{
+       display: flex;
+       justify-content: center;
+       font-size: 2.3em;
+    }
 
-.main__h2{
-font-size:1.3em ;
-}
+    .coeur-vide__restaurants{
+        font-size:1.5em;
+    }
 
-.main__p{
-    font-size:1.1em ;
-}
-
-.main__tarif{
-    font-size:1.1em ;
-}
-
-.main-article{
-    height: 90px;
-}
+    .coeur-plein__restaurants{
+        font-size: 1.5em;
+    }
 
 
-.main-article{
-    &:hover{
-        .div-check{
-            padding: 37px 15px; 
-        }
-    }    
-}
+    .main__h2{
+        font-size:1.3em ;
+    }
 
+    .main__tarif{
+        font-size:1.1em ;
+    }
 
+    .main-article{
+        margin-right: 150px;
+        margin-left: 150px;
+        height: 90px;
+    }
 
+    .main-article{
+        &:hover{
+            .div-check{
+                padding: 37px 15px; 
+            }
+        }    
+    }
 
-.bouton-restaurants{
-width: 30%;
-height: 50px;
-}
-
-.footer-logo__p{
-        display: flex;
-        justify-content: center;
- }
+    .footer-logo__p{
+            display: flex;
+            justify-content: center;
+     }
      
- .footer-li{
+   .footer-li{
          display: flex;
         justify-content: space-around;
- }
-  }
+   }
+}
 
 
-  @media all and (min-width:1200px)  {
+@media all and (min-width:1200px)  {
 
     .fleche{
         font-size: 2.5em;
         margin-top: 4%;
      }
         
-  .main-bloc{
-    display: inline-block;
-   align-items: space-around;
-    width: 33%;
-}
+    .main-restaurant__div{
+        display: flex;
+        align-content: flex-start;
+    }
 
-h3{
-    font-size: 2.6em;
-}
+    .main-bloc{
+        display: inline-block;
+        align-items: space-around;
+        vertical-align: top;
+        width: 33%;
+        margin-top: 0;
+    }
+    
+    h3{
+        font-size: 2.6em;
+    }
+
+   .main-article{
+        margin-right: 15px;
+        margin-left: 15px;
+        height: 90px;
+    }
  }
