@@ -46,8 +46,8 @@
 
 /*--section fonctionnement--*/
 
-.titre-h1{
-    @include mixin-position-h1;
+.accueil-h2{
+    @include mixin-position-acceuil-h2;
 }
 
 ol{
@@ -159,7 +159,12 @@ ol{
     p{
         font-size: 1.1em;
     }
+
     h1{
+        font-size: 1.5em;
+    }
+
+    .accueil-h2{
         font-size: 1.5em;
     }
 
@@ -167,7 +172,7 @@ ol{
         font-size: 1.3em;
     }
 
-    .titre-h1{
+    .accueil-h2{
     justify-content: center;
     padding-bottom: 20px;
     }
