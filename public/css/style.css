@@ -1,22 +1,16 @@
 @charset "UTF-8";
 /*--liste du fonctionnement--*/
-
 /*--mixin pour le main--*/
-
 /*--mixin pour le footer--*/
-
 /*---mixins pour les pages restaurants---*/
-
 /*--Le directory base contient la base du site,
  la police de caractere et les normes--*/
-
 @font-face {
   font-family: "roboto";
   src: url(./font/Roboto-Regular.ttf) format("TrueType");
   font-family: "shrikhand";
   src: url(./font/Shrikhand-Regular.ttf) format("TrueType");
 }
-
 html {
   font-family: "roboto", sans-serif;
   height: 100%;
@@ -32,7 +26,6 @@ body {
 }
 
 /*--font-size--*/
-
 h1 {
   font-size: 1.1em;
   font-weight: bold;
@@ -66,7 +59,6 @@ footer li {
 }
 
 /*--les liens--*/
-
 html a, html a:active {
   text-decoration: none;
   color: black;
@@ -77,14 +69,12 @@ html a, html a:active {
 }
 
 /*--les img--*/
-
 img {
   width: 100%;
   object-fit: cover;
 }
 
 /*---le dossier des boutons et des animations-*/
-
 .bouton {
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   padding: 10px 15px 10px 15px;
@@ -94,14 +84,12 @@ img {
   border-style: none;
   box-shadow: 3px 3px 3px #CECECE;
 }
-
 .bouton:hover {
   background: linear-gradient(to bottom right, #ff93e1, #a16be0);
   box-shadow: 6px 6px 6px #CECECE;
 }
 
 /*--Le loader--*/
-
 .loader {
   background-color: white;
   width: 100%;
@@ -159,7 +147,6 @@ img {
     visibility: hidden;
   }
 }
-
 @keyframes spin-max {
   from {
     transform: rotate(0deg);
@@ -170,7 +157,6 @@ img {
     visibility: hidden;
   }
 }
-
 @keyframes cacher {
   from {
     visibility: visible;
@@ -179,16 +165,12 @@ img {
     visibility: hidden;
   }
 }
-
 /*--Le coeur
 <i class="far fa-heart"></i>coeur vide
 <i class="fas fa-heart"></i>coeur plein
 --*/
-
 /*--Les animations--*/
-
 /*--Le coeur--*/
-
 @keyframes coeur-vide {
   from {
     transform: scale(1);
@@ -198,7 +180,6 @@ img {
     animation-fill-mode: forwards;
   }
 }
-
 @keyframes coeur-plein {
   from {
     transform: scale(0);
@@ -208,9 +189,7 @@ img {
     animation-fill-mode: forwards;
   }
 }
-
 /*--Les restaurants--*/
-
 @keyframes apparition {
   from {
     opacity: 0;
@@ -221,7 +200,6 @@ img {
     transform: translateY(0px);
   }
 }
-
 @keyframes apparition-check {
   from {
     opacity: 0;
@@ -232,7 +210,6 @@ img {
     transform: translatex(0px);
   }
 }
-
 @keyframes apparition-rotation {
   from {
     transform: rotateZ(-180deg);
@@ -241,7 +218,6 @@ img {
     transform: rotateZ(0deg);
   }
 }
-
 @keyframes decalage-prix {
   from {
     transform: translateX(0px);
@@ -250,7 +226,6 @@ img {
     transform: translateX(-30px);
   }
 }
-
 @keyframes decalage {
   from {
     width: 80%;
@@ -259,9 +234,7 @@ img {
     width: 70%;
   }
 }
-
 /*--Le logo--*/
-
 .logo {
   display: block;
   width: 100%;
@@ -277,7 +250,6 @@ img {
 }
 
 /*--le header--*/
-
 #adresse {
   display: flex;
   justify-content: center;
@@ -309,7 +281,6 @@ img {
 }
 
 /*--section fonctionnement--*/
-
 .accueil-h2 {
   display: flex;
   justify-content: flex-start;
@@ -334,13 +305,11 @@ ol {
   box-shadow: 3px 3px #EAEAEA, -3px 3px #EAEAEA;
   position: relative;
 }
-
 .liste-fonctionnement .puces {
   padding: 15px;
   color: grey;
   margin-left: 10px;
 }
-
 .liste-fonctionnement .liste-fonctionnement__p {
   margin: 14px 0 14px 0;
 }
@@ -355,17 +324,14 @@ ol {
 }
 
 /*--section fonctionnement hover--*/
-
 .liste-fonctionnement:hover {
   background-color: #F5EDFF;
 }
-
 .liste-fonctionnement:hover .puces {
   color: #9356DC;
 }
 
 /*--main--*/
-
 .titre-restaurants {
   display: flex;
   background-color: #F6F6F6;
@@ -419,7 +385,6 @@ ol {
 }
 
 /*--main-coeur--*/
-
 .container-coeur {
   font-size: 1.3em;
 }
@@ -447,35 +412,29 @@ ol {
 .container-coeur:hover .coeur-vide {
   animation: coeur-vide 1s linear;
 }
-
 .container-coeur:hover .coeur-plein {
   animation: coeur-plein 1s linear;
   animation-fill-mode: forwards;
 }
 
 /*--footer--*/
-
 .container-footer {
   background-color: #353535;
   color: white;
   padding-bottom: 20px;
 }
-
 .container-footer .footer-logo__p {
   font-size: medium;
   padding: 20px 0 0 20px;
   margin-top: 0;
 }
-
 .container-footer .footer-ul {
   list-style: none;
   padding-inline-start: 20px;
 }
-
 .container-footer .footer-ul li {
   margin-bottom: 10px;
 }
-
 .container-footer .footer-i {
   margin-right: 10px;
 }
@@ -485,69 +444,78 @@ ol {
 }
 
 /*--media queries--*/
-
 @media all and (min-width: 768px) {
   p {
     font-size: 1.1em;
   }
+
   h1 {
     font-size: 1.5em;
   }
+
   .accueil-h2 {
     font-size: 1.5em;
   }
+
   .container-main__h2 {
     font-size: 1.3em;
   }
+
   .accueil-h2 {
     justify-content: center;
     padding-bottom: 20px;
   }
+
   .bouton {
     width: 30%;
     height: 50px;
   }
+
   .liste-fonctionnement {
     justify-content: center;
     align-items: center;
   }
+
   .numero__1 {
     margin-left: 2px;
   }
+
   .liste-fonctionnement__numero {
     position: relative;
   }
+
   .main-accueil {
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
   }
+
   .container-main {
     width: 45%;
     height: 250px;
   }
+
   .footer-logo__p {
     display: flex;
     justify-content: center;
   }
+
   .footer-li {
     display: flex;
     justify-content: space-around;
     font-size: 1.1em;
   }
 }
-
 @media all and (min-width: 1200px) {
   .coeur-vide {
     font-size: 1.5em;
   }
+
   .coeur-plein {
     font-size: 1.5em;
   }
 }
-
 /*--le header--*/
-
 .header-restaurants {
   display: flex;
   position: relative;
@@ -567,7 +535,6 @@ ol {
 }
 
 /*--l'image de fond--*/
-
 .img-fond {
   width: 100%;
   height: 15em;
@@ -575,7 +542,6 @@ ol {
 }
 
 /*--main-restaurants--*/
-
 .main-restaurants {
   border-radius: 30px 30px 0 0;
   position: relative;
@@ -592,7 +558,6 @@ h3 {
 }
 
 /*--le coeur--*/
-
 .h3-coeur {
   position: relative;
 }
@@ -626,14 +591,12 @@ h3 {
 .container-coeur:hover .coeur-vide {
   animation: coeur-vide 1s linear;
 }
-
 .container-coeur:hover .coeur-plein {
   animation: coeur-plein 1s linear;
   animation-fill-mode: forwards;
 }
 
 /*--main restaurant*--*/
-
 h4 {
   margin-left: 20px;
 }
@@ -644,7 +607,6 @@ h4 {
 }
 
 /*--l'animation d'apparition--*/
-
 .main-article {
   display: flex;
   flex-direction: column;
@@ -655,7 +617,6 @@ h4 {
   position: relative;
   height: 65px;
 }
-
 .main-article:hover .div-check {
   background-color: #99E2D0;
   color: white;
@@ -668,30 +629,25 @@ h4 {
   animation-fill-mode: forwards;
   display: flex;
 }
-
 .main-article:hover .check {
   animation: apparition-rotation 0.7s linear;
   animation-fill-mode: forwards;
 }
-
 .main-article:hover .main__tarif {
   animation: decalage-prix 0.7s linear;
   animation-fill-mode: forwards;
   animation-delay: 100ms;
 }
-
 .main-article:hover .main__h2 {
   animation: decalage 0.7s linear;
   animation-fill-mode: forwards;
 }
-
 .main-article:hover .main__p {
   animation: decalage 0.7s linear;
   animation-fill-mode: forwards;
 }
 
 /*--main-restaurants--*/
-
 .main-article-2 {
   animation-delay: 200ms;
 }
@@ -735,7 +691,6 @@ h4 {
 }
 
 /*--le btn commander--*/
-
 .btn-restaurants {
   background-color: #F6F6F6;
   display: flex;
@@ -744,87 +699,92 @@ h4 {
 }
 
 /*--le footer--*/
-
 .container-footer {
   background-color: #353535;
   color: white;
   padding-bottom: 20px;
 }
-
 .container-footer .footer-logo__p {
   font-size: medium;
   padding: 20px 0 0 20px;
   margin-top: 0;
 }
-
 .container-footer .footer-ul {
   list-style: none;
   padding-inline-start: 20px;
 }
-
 .container-footer .footer-ul li {
   margin-bottom: 10px;
 }
-
 .container-footer .footer-i {
   margin-right: 10px;
 }
 
 /*--media queries--*/
-
 @media all and (min-width: 768px) {
   .fleche {
     font-size: 2.5em;
   }
+
   h4 {
     display: flex;
     justify-content: center;
     font-size: 1.7em;
   }
+
   h3 {
     display: flex;
     justify-content: center;
     font-size: 2.3em;
   }
+
   .coeur-vide__restaurants {
     font-size: 1.5em;
   }
+
   .coeur-plein__restaurants {
     font-size: 1.5em;
   }
+
   .main__h2 {
     font-size: 1.3em;
   }
+
   .main__tarif {
     font-size: 1.1em;
   }
+
   .main-article {
     margin-right: 150px;
     margin-left: 150px;
     height: 90px;
   }
+
   .main-article:hover .div-check {
     padding: 37px 15px;
   }
+
   .footer-logo__p {
     display: flex;
     justify-content: center;
   }
+
   .footer-li {
     display: flex;
     justify-content: space-around;
   }
 }
-
 @media all and (min-width: 1200px) {
   .fleche {
     font-size: 2.5em;
     margin-top: 4%;
   }
+
   .main-restaurant__div {
     display: flex;
     align-content: flex-start;
   }
+
   .main-bloc {
     display: inline-block;
     justify-content: space-around;
@@ -832,9 +792,11 @@ h4 {
     width: 33%;
     margin-top: 0;
   }
+
   h3 {
     font-size: 2.6em;
   }
+
   .main-article {
     margin-right: 15px;
     margin-left: 15px;
