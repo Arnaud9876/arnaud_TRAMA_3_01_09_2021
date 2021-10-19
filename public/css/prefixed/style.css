@@ -175,7 +175,7 @@ img {
 @keyframes spin-min {
   from {
     -webkit-transform: rotate 0deg;
-    transform: rotate (0deg);
+    transform: rotate(0deg);
     visibility: visible;
   }
   to {
@@ -201,7 +201,7 @@ img {
 @keyframes spin-max {
   from {
     -webkit-transform: rotate 0deg;
-    transform: rotate (0deg);
+    transform: rotate(0deg);
     visibility: visible;
   }
   to {
