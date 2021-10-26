@@ -177,7 +177,6 @@ img {
   }
   to {
     transform: scale(0);
-    animation-fill-mode: forwards;
   }
 }
 @keyframes coeur-plein {
@@ -186,7 +185,6 @@ img {
   }
   to {
     transform: scale(1);
-    animation-fill-mode: forwards;
   }
 }
 /*--Les restaurants--*/
@@ -411,6 +409,7 @@ ol {
 
 .container-coeur:hover .coeur-vide {
   animation: coeur-vide 1s linear;
+  animation-fill-mode: forwards;
 }
 .container-coeur:hover .coeur-plein {
   animation: coeur-plein 1s linear;
@@ -590,6 +589,7 @@ h3 {
 
 .container-coeur:hover .coeur-vide {
   animation: coeur-vide 1s linear;
+  animation-fill-mode: forwards;
 }
 .container-coeur:hover .coeur-plein {
   animation: coeur-plein 1s linear;

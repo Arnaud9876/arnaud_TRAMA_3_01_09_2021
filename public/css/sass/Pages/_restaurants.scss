@@ -73,6 +73,7 @@ h3{
 
     .coeur-vide{
     animation: coeur-vide 1s linear;
+    animation-fill-mode: forwards;
      }
 
     .coeur-plein{
